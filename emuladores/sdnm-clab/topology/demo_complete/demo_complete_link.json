@@ -1,0 +1,178 @@
+{
+  "links": {
+    "netconf:172.10.10.3:830/201-netconf:172.10.10.11:830/201": {
+      "basic": {
+        "type": "OPTICAL",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "netconf:172.10.10.4:830/201-netconf:172.10.10.12:830/201": {
+      "basic": {
+        "type": "OPTICAL",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine_w1/1-device:spine_e1/1": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine_w2/1-device:spine_e2/1": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine_w1/1-netconf:172.10.10.3:830/101": {
+      "basic": {
+        "type": "INDIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine_w2/1-netconf:172.10.10.4:830/101": {
+      "basic": {
+        "type": "INDIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine_w1/2-device:leaf_w1/1": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine_w1/3-device:leaf_w2/1": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine_w2/2-device:leaf_w1/2": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine_w2/3-device:leaf_w2/2": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine_e1/1-netconf:172.10.10.11:830/101": {
+      "basic": {
+        "type": "INDIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine_e2/1-netconf:172.10.10.12:830/101": {
+      "basic": {
+        "type": "INDIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine_e1/2-device:leaf_e1/1": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine_e1/3-device:leaf_e2/1": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine_e2/2-device:leaf_e1/2": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine_e2/3-device:leaf_e2/2": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    }
+  },
+  "ports": {
+    "device:leaf_w1/3": {
+      "interfaces": [
+        {
+          "name": "dtn1",
+          "ips": [
+            "10.0.1.254/24"
+          ],
+          "vlan-untagged": 10
+        }
+      ]
+    },
+    "device:leaf_w2/3": {
+      "interfaces": [
+        {
+          "name": "dtn2",
+          "ips": [
+            "10.0.2.254/24"
+          ],
+          "vlan-untagged": 10
+        }
+      ]
+    },
+    "device:leaf_e1/3": {
+      "interfaces": [
+        {
+          "name": "dtn3",
+          "ips": [
+            "10.0.3.254/24"
+          ],
+          "vlan-untagged": 20
+        }
+      ]
+    },
+    "device:leaf_e2/3": {
+      "interfaces": [
+        {
+          "name": "dtn4",
+          "ips": [
+            "10.0.4.254/24"
+          ],
+          "vlan-untagged": 20
+        }
+      ]
+    }
+  }
+}

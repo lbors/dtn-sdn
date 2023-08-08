@@ -1,0 +1,205 @@
+{
+  "flows":[
+   {
+    "priority": 100,
+    "timeout": 10,
+    "isPermanent": true,
+    "deviceId": "of:00000bde2f07a413",
+    "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "1"
+          }
+        ],
+        "deferred": []
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "ETH_TYPE",
+            "ethType": "0x0800"
+          },
+          {
+            "type": "IP_PROTO",
+            "protocol": "6"
+          },
+          {
+            "type": "IN_PORT",
+            "port": "3"
+          },
+          {
+            "type": "IPV4_DST",
+            "ip": "10.0.1.0/24"
+          }
+        ]
+      }
+  },
+   {
+    "priority": 100,
+    "timeout": 10,
+    "isPermanent": true,
+    "deviceId": "of:00000bde2f07a413",
+    "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "1"
+          }
+        ],
+        "deferred": []
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "ETH_TYPE",
+            "ethType": "0x0800"
+          },
+          {
+            "type": "IP_PROTO",
+            "protocol": "6"
+          },
+          {
+            "type": "IN_PORT",
+            "port": "4"
+          },
+          {
+            "type": "IPV4_DST",
+            "ip": "10.0.1.0/24"
+          }
+        ]
+      }
+  },
+   {
+    "priority": 100,
+    "timeout": 10,
+    "isPermanent": true,
+    "deviceId": "of:00000bde2f07a413",
+    "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "2"
+          }
+        ],
+        "deferred": []
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "ETH_TYPE",
+            "ethType": "0x0800"
+          },
+          {
+            "type": "IP_PROTO",
+            "protocol": "17"
+          },
+          {
+            "type": "IN_PORT",
+            "port": "3"
+          },
+          {
+            "type": "IPV4_DST",
+            "ip": "10.0.1.0/24"
+          }
+        ]
+      }
+  },
+   {
+    "priority": 100,
+    "timeout": 10,
+    "isPermanent": true,
+    "deviceId": "of:00000bde2f07a413",
+    "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "2"
+          }
+        ],
+        "deferred": []
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "ETH_TYPE",
+            "ethType": "0x0800"
+          },
+          {
+            "type": "IP_PROTO",
+            "protocol": "17"
+          },
+          {
+            "type": "IN_PORT",
+            "port": "4"
+          },
+          {
+            "type": "IPV4_DST",
+            "ip": "10.0.1.0/24"
+          }
+        ]
+      }
+  },
+   {
+    "priority": 100,
+    "timeout": 10,
+    "isPermanent": true,
+    "deviceId": "of:00000bde2f07a413",
+    "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "3"
+          }
+        ],
+        "deferred": []
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "ETH_TYPE",
+            "ethType": "0x0800"
+          },
+          {
+              "type": "IPV4_DST",
+              "ip": "10.0.2.0/24"
+          },
+          {
+            "type": "IN_PORT",
+            "port": "ANY"
+          }
+        ]
+      }
+   },
+   {
+    "priority": 100,
+    "timeout": 10,
+    "isPermanent": true,
+    "deviceId": "of:00000bde2f07a413",
+    "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "4"
+          }
+        ],
+        "deferred": []
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "ETH_TYPE",
+            "ethType": "0x0800"
+          },
+          {
+              "type": "IPV4_DST",
+              "ip": "10.0.3.0/24"
+          },
+          {
+            "type": "IN_PORT",
+            "port": "ANY"
+          }
+        ]
+      }
+   }
+]}

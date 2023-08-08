@@ -1,0 +1,253 @@
+{
+  "name": "whx-teste",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "exp",
+        "bridge": "br-596a414a3225",
+        "ipv4-subnet": "172.10.10.0/24",
+        "ipv4-gw": "172.10.10.1",
+        "mtu": "1500",
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "ht1": {
+      "index": "0",
+      "shortname": "ht1",
+      "longname": "clab-whx-teste-ht1",
+      "fqdn": "ht1.whx-teste.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/clab-whx-teste/ht1",
+      "kind": "linux",
+      "image": "sdnm/simplehost:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.10.9",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-596a414a3225",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/clab-whx-teste/ht1",
+        "clab-node-name": "ht1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/writebox.clab.yml",
+        "containerlab": "whx-teste"
+      }
+    },
+    "ht2": {
+      "index": "1",
+      "shortname": "ht2",
+      "longname": "clab-whx-teste-ht2",
+      "fqdn": "ht2.whx-teste.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/clab-whx-teste/ht2",
+      "kind": "linux",
+      "image": "sdnm/simplehost:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.10.10",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-596a414a3225",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/clab-whx-teste/ht2",
+        "clab-node-name": "ht2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/writebox.clab.yml",
+        "containerlab": "whx-teste"
+      }
+    },
+    "ht3": {
+      "index": "2",
+      "shortname": "ht3",
+      "longname": "clab-whx-teste-ht3",
+      "fqdn": "ht3.whx-teste.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/clab-whx-teste/ht3",
+      "kind": "linux",
+      "image": "sdnm/simplehost:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.10.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-596a414a3225",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/clab-whx-teste/ht3",
+        "clab-node-name": "ht3",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/writebox.clab.yml",
+        "containerlab": "whx-teste"
+      }
+    },
+    "onos": {
+      "index": "3",
+      "shortname": "onos",
+      "longname": "clab-whx-teste-onos",
+      "fqdn": "onos.whx-teste.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/clab-whx-teste/onos",
+      "kind": "linux",
+      "image": "onosproject/onos:2.4.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.10.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-596a414a3225",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/clab-whx-teste/onos",
+        "clab-node-name": "onos",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/writebox.clab.yml",
+        "containerlab": "whx-teste"
+      }
+    },
+    "whx1": {
+      "index": "4",
+      "shortname": "whx1",
+      "longname": "clab-whx-teste-whx1",
+      "fqdn": "whx1.whx-teste.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/clab-whx-teste/whx1",
+      "kind": "linux",
+      "image": "sdnm/clab-writebox-sdnm:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.10.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-596a414a3225",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/clab-whx-teste/whx1",
+        "clab-node-name": "whx1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/writebox.clab.yml",
+        "containerlab": "whx-teste"
+      }
+    },
+    "whx2": {
+      "index": "5",
+      "shortname": "whx2",
+      "longname": "clab-whx-teste-whx2",
+      "fqdn": "whx2.whx-teste.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/clab-whx-teste/whx2",
+      "kind": "linux",
+      "image": "sdnm/clab-writebox-sdnm:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.10.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-596a414a3225",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/clab-whx-teste/whx2",
+        "clab-node-name": "whx2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/writebox.clab.yml",
+        "containerlab": "whx-teste"
+      }
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "whx1",
+        "interface": "vif1",
+        "mac": "aa:c1:ab:d5:5a:5d",
+        "peer": "z"
+      },
+      "z": {
+        "node": "whx2",
+        "interface": "vif1",
+        "mac": "aa:c1:ab:6b:9f:f2",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "whx1",
+        "interface": "vif2",
+        "mac": "aa:c1:ab:1b:94:37",
+        "peer": "z"
+      },
+      "z": {
+        "node": "whx2",
+        "interface": "vif2",
+        "mac": "aa:c1:ab:b3:3d:ce",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "whx1",
+        "interface": "ht1",
+        "mac": "aa:c1:ab:57:5d:1d",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ht1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:7a:20:97",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "whx2",
+        "interface": "ht2",
+        "mac": "aa:c1:ab:8e:d7:99",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ht2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:28:34:27",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "whx2",
+        "interface": "ht3",
+        "mac": "aa:c1:ab:1d:58:5b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ht3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:38:7b:34",
+        "peer": "a"
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+all:
+  children:
+    linux:
+      hosts:
+        clab-demo-ca1e:
+          ansible_host: 172.10.10.11
+        clab-demo-ca1w:
+          ansible_host: 172.10.10.3
+        clab-demo-ca2e:
+          ansible_host: 172.10.10.12
+        clab-demo-ca2w:
+          ansible_host: 172.10.10.4
+        clab-demo-dtn1:
+          ansible_host: 172.10.10.9
+        clab-demo-dtn2:
+          ansible_host: 172.10.10.10
+        clab-demo-dtn3:
+          ansible_host: 172.10.10.17
+        clab-demo-dtn4:
+          ansible_host: 172.10.10.18
+        clab-demo-leaf_e1:
+          ansible_host: 172.10.10.15
+        clab-demo-leaf_e2:
+          ansible_host: 172.10.10.16
+        clab-demo-leaf_w1:
+          ansible_host: 172.10.10.7
+        clab-demo-leaf_w2:
+          ansible_host: 172.10.10.8
+        clab-demo-onos:
+          ansible_host: 172.10.10.2
+        clab-demo-spine_e1:
+          ansible_host: 172.10.10.13
+        clab-demo-spine_e2:
+          ansible_host: 172.10.10.14
+        clab-demo-spine_w1:
+          ansible_host: 172.10.10.5
+        clab-demo-spine_w2:
+          ansible_host: 172.10.10.6

@@ -1,0 +1,78 @@
+name: teste
+
+mgmt:
+  network: exp
+  ipv4_subnet: 172.10.10.0/24
+
+topology:
+  nodes:
+    onos:
+      kind: linux
+      image: onos-rnp-demo:latest
+      mgmt_ipv4: 172.10.10.2
+      env:
+        ONOS_APPS: gui2,drivers.bmv2,pipelines.fabric,segmentrouting,lldpprovider,hostprovider,proxyarp,openflow,odtn-service,optical-rest,roadm
+
+    ca1:
+      kind: linux
+      image: sdnm/cassini-sdnm:latest
+      mgmt_ipv4: 172.10.10.3
+
+    ca2:
+      kind: linux
+      image: sdnm/cassini-sdnm:latest
+      mgmt_ipv4: 172.10.10.4
+
+    spine1:
+      kind: linux
+      image: sdnm/stratum:1.0
+      mgmt_ipv4: 172.10.10.5
+
+    spine2:
+      kind: linux
+      image: sdnm/stratum:1.0
+      mgmt_ipv4: 172.10.10.6
+
+    leaf1:
+      kind: linux
+      image: sdnm/stratum:1.0
+      mgmt_ipv4: 172.10.10.7
+
+    leaf2:
+      kind: linux
+      image: sdnm/stratum:1.0
+      mgmt_ipv4: 172.10.10.8
+
+    ht1:
+      kind: linux
+      image: sdnm/clab-simplehost:latest
+      binds:
+        - ./network_config:/root/network_config:ro
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      mgmt_ipv4: 172.10.10.9
+
+    ht2:
+      kind: linux
+      image: sdnm/clab-simplehost:latest
+      binds:
+        - ./network_config:/root/network_config:ro
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      mgmt_ipv4: 172.10.10.10
+
+    tapi:
+      kind: linux
+      image: tapi-cpqd:latest
+      mgmt_ipv4: 172.10.10.11
+  
+  links:
+    - endpoints: ["ca1:ca1-ovif1", "ca2:ca2-ovif1"]
+
+    - endpoints: ["ca1:ca1-vif1", "spine1:spine1-vif1"]
+    - endpoints: ["ca2:ca2-vif1", "spine2:spine2-vif1"]
+
+    - endpoints: ["spine1:spine1-vif2", "leaf1:leaf1-vif1"]
+    - endpoints: ["spine2:spine2-vif2", "leaf2:leaf2-vif1"]
+
+
+    - endpoints: ["leaf1:leaf1-vif2", "ht1:ht1-ht1"]
+    - endpoints: ["leaf2:leaf2-vif2", "ht2:ht2-ht1"]

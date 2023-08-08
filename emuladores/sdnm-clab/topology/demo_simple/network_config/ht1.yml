@@ -1,0 +1,18 @@
+interfaces:
+- name: ht1-ht1
+  type: ethernet
+  state: up
+  ipv4:
+    enabled: true
+    address:
+    - ip: 10.0.1.1
+      prefix-length: 24
+    dhcp: false
+
+#routes:
+#  config:
+#  - destination: 10.0.1.0/24
+#    metric: 150
+#    next-hop-address: 10.0.1.254
+#    next-hop-interface: ht1-ht1
+#    table-id: 254

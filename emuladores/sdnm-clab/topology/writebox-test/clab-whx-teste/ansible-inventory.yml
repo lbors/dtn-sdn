@@ -1,0 +1,16 @@
+all:
+  children:
+    linux:
+      hosts:
+        clab-whx-teste-ht1:
+          ansible_host: 172.10.10.9
+        clab-whx-teste-ht2:
+          ansible_host: 172.10.10.10
+        clab-whx-teste-ht3:
+          ansible_host: 172.10.10.11
+        clab-whx-teste-onos:
+          ansible_host: 172.10.10.2
+        clab-whx-teste-whx1:
+          ansible_host: 172.10.10.3
+        clab-whx-teste-whx2:
+          ansible_host: 172.10.10.4

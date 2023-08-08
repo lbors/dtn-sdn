@@ -1,0 +1,128 @@
+name: demo
+
+mgmt:
+  network: exp
+  ipv4_subnet: 172.10.10.0/24
+#  ipv6_subnet: 2001:172:100:100::/80
+
+topology:
+  nodes:
+    onos:
+      kind: linux
+      image: onos-rnp-demo:latest
+      mgmt_ipv4: 172.10.10.2
+      env:
+        ONOS_APPS: gui2,drivers.bmv2,pipelines.fabric,segmentrouting,lldpprovider,hostprovider,proxyarp,openflow,odtn-service,optical-rest,roadm
+
+    # West side
+    ca1w:
+      kind: linux
+      image: sdnm/cassini-sdnm:latest
+      mgmt_ipv4: 172.10.10.3
+
+    ca2w:
+      kind: linux
+      image: sdnm/cassini-sdnm:latest
+      mgmt_ipv4: 172.10.10.4
+
+    spine_w1:
+      kind: linux
+      image: sdnm/stratum:1.0
+      mgmt_ipv4: 172.10.10.5
+
+    spine_w2:
+      kind: linux
+      image: sdnm/stratum:1.0
+      mgmt_ipv4: 172.10.10.6
+
+    leaf_w1:
+      kind: linux
+      image: sdnm/stratum:1.0
+      mgmt_ipv4: 172.10.10.7
+
+    leaf_w2:
+      kind: linux
+      image: sdnm/stratum:1.0
+      mgmt_ipv4: 172.10.10.8
+
+    dtn1:
+      kind: linux
+      image: sdnm/simplehost:latest
+      mgmt_ipv4: 172.10.10.9
+
+    dtn2:
+      kind: linux
+      image: sdnm/simplehost:latest
+      mgmt_ipv4: 172.10.10.10
+
+    # East side
+    ca1e:
+      kind: linux
+      image: sdnm/cassini-sdnm:latest
+      mgmt_ipv4: 172.10.10.11
+
+    ca2e:
+      kind: linux
+      image: sdnm/cassini-sdnm:latest
+      mgmt_ipv4: 172.10.10.12
+
+    spine_e1:
+      kind: linux
+      image: sdnm/stratum:1.0
+      mgmt_ipv4: 172.10.10.13
+
+    spine_e2:
+      kind: linux
+      image: sdnm/stratum:1.0
+      mgmt_ipv4: 172.10.10.14
+
+    leaf_e1:
+      kind: linux
+      image: sdnm/stratum:1.0
+      mgmt_ipv4: 172.10.10.15
+
+    leaf_e2:
+      kind: linux
+      image: sdnm/stratum:1.0
+      mgmt_ipv4: 172.10.10.16
+
+    dtn3:
+      kind: linux
+      image: sdnm/simplehost:latest
+      mgmt_ipv4: 172.10.10.17
+
+    dtn4:
+      kind: linux
+      image: sdnm/simplehost:latest
+      mgmt_ipv4: 172.10.10.18
+    
+  
+  links:
+    - endpoints: ["ca1w:ca1w-ovif1", "ca1e:ca1e-ovif1"]
+    - endpoints: ["ca2w:ca2w-ovif1", "ca2e:ca2e-ovif1"]
+
+    # Link west side
+    - endpoints: ["ca1w:ca1w-vif1", "spine_w1:spine_w1-vif1"]
+    - endpoints: ["ca2w:ca2w-vif1", "spine_w2:spine_w2-vif1"]
+
+    - endpoints: ["spine_w1:spine_w1-vif2", "leaf_w1:leaf_w1-vif1"]
+    - endpoints: ["spine_w1:spine_w1-vif3", "leaf_w2:leaf_w2-vif1"]
+    - endpoints: ["spine_w2:spine_w2-vif2", "leaf_w1:leaf_w1-vif2"]
+    - endpoints: ["spine_w2:spine_w2-vif3", "leaf_w2:leaf_w2-vif2"]
+
+    - endpoints: ["leaf_w1:leaf_w1-vif3", "dtn1:dtn1-ht1"]
+    - endpoints: ["leaf_w2:leaf_w2-vif3", "dtn2:dtn2-ht1"]
+
+
+    # Link east side
+    - endpoints: ["ca1e:ca1e-vif1", "spine_e1:spine_e1-vif1"]
+    - endpoints: ["ca2e:ca2e-vif1", "spine_e2:spine_e2-vif1"]
+
+    - endpoints: ["spine_e1:spine_e1-vif2", "leaf_e1:leaf_e1-vif1"]
+    - endpoints: ["spine_e1:spine_e1-vif3", "leaf_e2:leaf_e2-vif1"]
+    - endpoints: ["spine_e2:spine_e2-vif2", "leaf_e1:leaf_e1-vif2"]
+    - endpoints: ["spine_e2:spine_e2-vif3", "leaf_e2:leaf_e2-vif2"]
+
+    - endpoints: ["leaf_e1:leaf_e1-vif3", "dtn3:dtn3-ht1"]
+    - endpoints: ["leaf_e2:leaf_e2-vif3", "dtn4:dtn4-ht1"]
+

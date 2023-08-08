@@ -1,0 +1,554 @@
+{
+  "name": "whx-redeIpe",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "redeIpe",
+        "bridge": "br-3522935b6919",
+        "ipv4-subnet": "172.10.20.0/24",
+        "ipv4-gw": "172.10.20.1",
+        "mtu": "1500",
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "ce": {
+      "index": "0",
+      "shortname": "ce",
+      "longname": "clab-whx-redeIpe-ce",
+      "fqdn": "ce.whx-redeIpe.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/ce",
+      "kind": "linux",
+      "image": "sdnm/clab-writebox-sdnm:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3522935b6919",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/ce",
+        "clab-node-name": "ce",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/redeIpe.clab.yml",
+        "containerlab": "whx-redeIpe"
+      }
+    },
+    "ce-ht": {
+      "index": "1",
+      "shortname": "ce-ht",
+      "longname": "clab-whx-redeIpe-ce-ht",
+      "fqdn": "ce-ht.whx-redeIpe.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/ce-ht",
+      "kind": "linux",
+      "image": "sdnm/simplehost:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.20.37",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3522935b6919",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/ce-ht",
+        "clab-node-name": "ce-ht",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/redeIpe.clab.yml",
+        "containerlab": "whx-redeIpe"
+      }
+    },
+    "df": {
+      "index": "2",
+      "shortname": "df",
+      "longname": "clab-whx-redeIpe-df",
+      "fqdn": "df.whx-redeIpe.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/df",
+      "kind": "linux",
+      "image": "sdnm/clab-writebox-sdnm:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3522935b6919",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/df",
+        "clab-node-name": "df",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/redeIpe.clab.yml",
+        "containerlab": "whx-redeIpe"
+      }
+    },
+    "df-ht": {
+      "index": "3",
+      "shortname": "df-ht",
+      "longname": "clab-whx-redeIpe-df-ht",
+      "fqdn": "df-ht.whx-redeIpe.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/df-ht",
+      "kind": "linux",
+      "image": "sdnm/simplehost:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.20.32",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3522935b6919",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/df-ht",
+        "clab-node-name": "df-ht",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/redeIpe.clab.yml",
+        "containerlab": "whx-redeIpe"
+      }
+    },
+    "ma": {
+      "index": "4",
+      "shortname": "ma",
+      "longname": "clab-whx-redeIpe-ma",
+      "fqdn": "ma.whx-redeIpe.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/ma",
+      "kind": "linux",
+      "image": "sdnm/clab-writebox-sdnm:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3522935b6919",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/ma",
+        "clab-node-name": "ma",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/redeIpe.clab.yml",
+        "containerlab": "whx-redeIpe"
+      }
+    },
+    "ma-ht": {
+      "index": "5",
+      "shortname": "ma-ht",
+      "longname": "clab-whx-redeIpe-ma-ht",
+      "fqdn": "ma-ht.whx-redeIpe.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/ma-ht",
+      "kind": "linux",
+      "image": "sdnm/simplehost:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.20.35",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3522935b6919",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/ma-ht",
+        "clab-node-name": "ma-ht",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/redeIpe.clab.yml",
+        "containerlab": "whx-redeIpe"
+      }
+    },
+    "onos": {
+      "index": "6",
+      "shortname": "onos",
+      "longname": "clab-whx-redeIpe-onos",
+      "fqdn": "onos.whx-redeIpe.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/onos",
+      "kind": "linux",
+      "image": "onosproject/onos:2.4.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.20.100",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3522935b6919",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/onos",
+        "clab-node-name": "onos",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/redeIpe.clab.yml",
+        "containerlab": "whx-redeIpe"
+      }
+    },
+    "pa": {
+      "index": "7",
+      "shortname": "pa",
+      "longname": "clab-whx-redeIpe-pa",
+      "fqdn": "pa.whx-redeIpe.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/pa",
+      "kind": "linux",
+      "image": "sdnm/clab-writebox-sdnm:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3522935b6919",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/pa",
+        "clab-node-name": "pa",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/redeIpe.clab.yml",
+        "containerlab": "whx-redeIpe"
+      }
+    },
+    "pa-ht": {
+      "index": "8",
+      "shortname": "pa-ht",
+      "longname": "clab-whx-redeIpe-pa-ht",
+      "fqdn": "pa-ht.whx-redeIpe.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/pa-ht",
+      "kind": "linux",
+      "image": "sdnm/simplehost:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.20.34",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3522935b6919",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/pa-ht",
+        "clab-node-name": "pa-ht",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/redeIpe.clab.yml",
+        "containerlab": "whx-redeIpe"
+      }
+    },
+    "pi": {
+      "index": "9",
+      "shortname": "pi",
+      "longname": "clab-whx-redeIpe-pi",
+      "fqdn": "pi.whx-redeIpe.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/pi",
+      "kind": "linux",
+      "image": "sdnm/clab-writebox-sdnm:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3522935b6919",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/pi",
+        "clab-node-name": "pi",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/redeIpe.clab.yml",
+        "containerlab": "whx-redeIpe"
+      }
+    },
+    "pi-ht": {
+      "index": "10",
+      "shortname": "pi-ht",
+      "longname": "clab-whx-redeIpe-pi-ht",
+      "fqdn": "pi-ht.whx-redeIpe.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/pi-ht",
+      "kind": "linux",
+      "image": "sdnm/simplehost:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.20.36",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3522935b6919",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/pi-ht",
+        "clab-node-name": "pi-ht",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/redeIpe.clab.yml",
+        "containerlab": "whx-redeIpe"
+      }
+    },
+    "to": {
+      "index": "11",
+      "shortname": "to",
+      "longname": "clab-whx-redeIpe-to",
+      "fqdn": "to.whx-redeIpe.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/to",
+      "kind": "linux",
+      "image": "sdnm/clab-writebox-sdnm:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3522935b6919",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/to",
+        "clab-node-name": "to",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/redeIpe.clab.yml",
+        "containerlab": "whx-redeIpe"
+      }
+    },
+    "to-ht": {
+      "index": "12",
+      "shortname": "to-ht",
+      "longname": "clab-whx-redeIpe-to-ht",
+      "fqdn": "to-ht.whx-redeIpe.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/to-ht",
+      "kind": "linux",
+      "image": "sdnm/simplehost:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.20.33",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3522935b6919",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/clab-whx-redeIpe/to-ht",
+        "clab-node-name": "to-ht",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/redeIpe/whx/redeIpe.clab.yml",
+        "containerlab": "whx-redeIpe"
+      }
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "df",
+        "interface": "vif1",
+        "mac": "aa:c1:ab:36:6d:f5",
+        "peer": "z"
+      },
+      "z": {
+        "node": "to",
+        "interface": "vif1",
+        "mac": "aa:c1:ab:30:7d:f8",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "df",
+        "interface": "vif2",
+        "mac": "aa:c1:ab:f6:e7:36",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ma",
+        "interface": "vif1",
+        "mac": "aa:c1:ab:b2:03:a0",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "df",
+        "interface": "vif3",
+        "mac": "aa:c1:ab:e6:39:ed",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ce",
+        "interface": "vif1",
+        "mac": "aa:c1:ab:8b:5c:c8",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "to",
+        "interface": "vif2",
+        "mac": "aa:c1:ab:81:64:b5",
+        "peer": "z"
+      },
+      "z": {
+        "node": "pa",
+        "interface": "vif1",
+        "mac": "aa:c1:ab:36:99:45",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pa",
+        "interface": "vif2",
+        "mac": "aa:c1:ab:dc:0d:60",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ma",
+        "interface": "vif2",
+        "mac": "aa:c1:ab:a9:e8:8f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "ma",
+        "interface": "vif3",
+        "mac": "aa:c1:ab:04:c5:9d",
+        "peer": "z"
+      },
+      "z": {
+        "node": "pi",
+        "interface": "vif1",
+        "mac": "aa:c1:ab:79:61:8f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pi",
+        "interface": "vif2",
+        "mac": "aa:c1:ab:a7:a5:d3",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ce",
+        "interface": "vif2",
+        "mac": "aa:c1:ab:c6:e2:b9",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "df",
+        "interface": "vif4",
+        "mac": "aa:c1:ab:c2:1d:52",
+        "peer": "z"
+      },
+      "z": {
+        "node": "df-ht",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:f2:eb:a8",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "to",
+        "interface": "vif3",
+        "mac": "aa:c1:ab:dc:6a:8a",
+        "peer": "z"
+      },
+      "z": {
+        "node": "to-ht",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:8e:7e:be",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pa",
+        "interface": "vif3",
+        "mac": "aa:c1:ab:78:2e:25",
+        "peer": "z"
+      },
+      "z": {
+        "node": "pa-ht",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d7:de:9b",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "ma",
+        "interface": "vif4",
+        "mac": "aa:c1:ab:76:82:99",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ma-ht",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:90:41:54",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pi",
+        "interface": "vif3",
+        "mac": "aa:c1:ab:23:8b:e8",
+        "peer": "z"
+      },
+      "z": {
+        "node": "pi-ht",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ab:64:b9",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "ce",
+        "interface": "vif3",
+        "mac": "aa:c1:ab:62:de:73",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ce-ht",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:0b:f5:a2",
+        "peer": "a"
+      }
+    }
+  ]
+}

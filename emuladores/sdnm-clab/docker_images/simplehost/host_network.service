@@ -1,0 +1,11 @@
+[Unit]
+Description= Start Config Network
+#After= network.target
+
+[Service]
+WorkingDirectory=/root
+ExecStart=/bin/bash init-service.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

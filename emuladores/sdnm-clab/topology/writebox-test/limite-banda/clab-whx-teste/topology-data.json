@@ -1,0 +1,253 @@
+{
+  "name": "whx-teste",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "exp",
+        "bridge": "br-dc488cc9e29a",
+        "ipv4-subnet": "172.10.10.0/24",
+        "ipv4-gw": "172.10.10.1",
+        "mtu": "1500",
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "ht1": {
+      "index": "0",
+      "shortname": "ht1",
+      "longname": "clab-whx-teste-ht1",
+      "fqdn": "ht1.whx-teste.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/clab-whx-teste/ht1",
+      "kind": "linux",
+      "image": "sdnm/simplehost:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.10.23",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-dc488cc9e29a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/clab-whx-teste/ht1",
+        "clab-node-name": "ht1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/lim-banda.clab.yml",
+        "containerlab": "whx-teste"
+      }
+    },
+    "ht2": {
+      "index": "1",
+      "shortname": "ht2",
+      "longname": "clab-whx-teste-ht2",
+      "fqdn": "ht2.whx-teste.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/clab-whx-teste/ht2",
+      "kind": "linux",
+      "image": "sdnm/simplehost:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.10.24",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-dc488cc9e29a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/clab-whx-teste/ht2",
+        "clab-node-name": "ht2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/lim-banda.clab.yml",
+        "containerlab": "whx-teste"
+      }
+    },
+    "onos": {
+      "index": "2",
+      "shortname": "onos",
+      "longname": "clab-whx-teste-onos",
+      "fqdn": "onos.whx-teste.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/clab-whx-teste/onos",
+      "kind": "linux",
+      "image": "onosproject/onos:2.4.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.10.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-dc488cc9e29a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/clab-whx-teste/onos",
+        "clab-node-name": "onos",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/lim-banda.clab.yml",
+        "containerlab": "whx-teste"
+      }
+    },
+    "whx1": {
+      "index": "3",
+      "shortname": "whx1",
+      "longname": "clab-whx-teste-whx1",
+      "fqdn": "whx1.whx-teste.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/clab-whx-teste/whx1",
+      "kind": "linux",
+      "image": "sdnm/clab-writebox-sdnm:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.10.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-dc488cc9e29a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/clab-whx-teste/whx1",
+        "clab-node-name": "whx1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/lim-banda.clab.yml",
+        "containerlab": "whx-teste"
+      }
+    },
+    "whx2": {
+      "index": "4",
+      "shortname": "whx2",
+      "longname": "clab-whx-teste-whx2",
+      "fqdn": "whx2.whx-teste.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/clab-whx-teste/whx2",
+      "kind": "linux",
+      "image": "sdnm/clab-writebox-sdnm:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.10.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-dc488cc9e29a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/clab-whx-teste/whx2",
+        "clab-node-name": "whx2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/lim-banda.clab.yml",
+        "containerlab": "whx-teste"
+      }
+    },
+    "whx3": {
+      "index": "5",
+      "shortname": "whx3",
+      "longname": "clab-whx-teste-whx3",
+      "fqdn": "whx3.whx-teste.io",
+      "group": "",
+      "labdir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/clab-whx-teste/whx3",
+      "kind": "linux",
+      "image": "sdnm/clab-writebox-sdnm:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.10.10.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-dc488cc9e29a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/clab-whx-teste/whx3",
+        "clab-node-name": "whx3",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/lucas/Documentos/UFPA/Mestrado/DT/sdnm-clab/topology/writebox-test/limite-banda/lim-banda.clab.yml",
+        "containerlab": "whx-teste"
+      }
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "whx1",
+        "interface": "vif1",
+        "mac": "aa:c1:ab:f4:51:ce",
+        "peer": "z"
+      },
+      "z": {
+        "node": "whx2",
+        "interface": "vif1",
+        "mac": "aa:c1:ab:44:fc:90",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "whx1",
+        "interface": "vif2",
+        "mac": "aa:c1:ab:11:f1:66",
+        "peer": "z"
+      },
+      "z": {
+        "node": "whx3",
+        "interface": "vif1",
+        "mac": "aa:c1:ab:21:b7:ca",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "whx2",
+        "interface": "vif2",
+        "mac": "aa:c1:ab:a2:b7:85",
+        "peer": "z"
+      },
+      "z": {
+        "node": "whx3",
+        "interface": "vif2",
+        "mac": "aa:c1:ab:e6:24:e6",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "whx1",
+        "interface": "vif3",
+        "mac": "aa:c1:ab:c3:5a:71",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ht1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:8b:70:f2",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "whx2",
+        "interface": "vif3",
+        "mac": "aa:c1:ab:d5:1c:03",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ht2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:c3:64:0c",
+        "peer": "a"
+      }
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+# PA - MA
+{
+  "appId": "org.onosproject.optical-rest",
+  "ingressPoint": {
+    "device": "netconf:172.10.11.3:830",
+    "port": "201"
+  },
+  "egressPoint": {
+    "device": "netconf:172.10.11.6:830",
+    "port": "201"
+  },
+  "bidirectional": "true",
+  "suggestedPath": {
+    "links": [
+      {
+        "src": "netconf:172.10.11.3:830/201",
+        "dst": "netconf:172.10.11.6:830/201"
+      }
+    ]
+  }
+}
+
+# MA - DF
+
+{
+  "appId": "org.onosproject.optical-rest",
+  "ingressPoint": {
+    "device": "netconf:172.10.11.6:830",
+    "port": "203"
+  },
+  "egressPoint": {
+    "device": "netconf:172.10.11.9:830",
+    "port": "203"
+  },
+  "bidirectional": "true",
+  "suggestedPath": {
+    "links": [
+      {
+        "src": "netconf:172.10.11.6:830/203",
+        "dst": "netconf:172.10.11.9:830/203"
+      }
+    ]
+  }
+}
+
+# PA - TO - DF
+
+{
+  "appId": "org.onosproject.optical-rest",
+  "ingressPoint": {
+    "device": "netconf:172.10.11.3:830",
+    "port": "203"
+  },
+  "egressPoint": {
+    "device": "netconf:172.10.11.9:830",
+    "port": "201"
+  },
+  "bidirectional": "true",
+  "suggestedPath": {
+    "links": [
+      {
+        "src": "netconf:172.10.11.3:830/203",
+        "dst": "netconf:172.10.11.12:830/203"
+      },
+      {
+        "src": "netconf:172.10.11.12:830/201",
+        "dst": "netconf:172.10.11.9:830/201"        
+      }
+    ]
+  }
+}
+
+# PA - TO
+
+{
+  "appId": "org.onosproject.optical-rest",
+  "ingressPoint": {
+    "device": "netconf:172.10.11.3:830",
+    "port": "203"
+  },
+  "egressPoint": {
+    "device": "netconf:172.10.11.12:830",
+    "port": "203"
+  },
+  "bidirectional": "true",
+  "suggestedPath": {
+    "links": [
+      {
+        "src": "netconf:172.10.11.3:830/203",
+        "dst": "netconf:172.10.11.12:830/203"
+      }
+    ]
+  }
+}
+
+# TO - DF
+
+{
+  "appId": "org.onosproject.optical-rest",
+  "ingressPoint": {
+    "device": "netconf:172.10.11.12:830",
+    "port": "201"
+  },
+  "egressPoint": {
+    "device": "netconf:172.10.11.9:830",
+    "port": "201"
+  },
+  "bidirectional": "true",
+  "suggestedPath": {
+    "links": [
+      {
+        "src": "netconf:172.10.11.12:830/201",
+        "dst": "netconf:172.10.11.9:830/201"
+      }
+    ]
+  }
+}

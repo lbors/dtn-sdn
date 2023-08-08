@@ -1,0 +1,4 @@
+connection:
+  ovs-bridge:
+     - [oe1, ca1-ovif1]
+     - [xe1, ca1-vif1]

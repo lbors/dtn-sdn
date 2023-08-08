@@ -1,0 +1,47 @@
+name: teste
+
+mgmt:
+  network: exp
+  ipv4_subnet: 172.10.10.0/24
+#  ipv6_subnet: 2001:172:100:100::/80
+
+topology:
+  nodes:
+    onos:
+      kind: linux
+      image: onos-rnp-demo:latest
+      mgmt_ipv4: 172.10.10.2
+      env:
+        ONOS_APPS: gui,hostprovider,proxyarp,route-service,openflow,fwd,odtn-service
+
+    ca1:
+      kind: linux
+      image: sdnm/cassini-sdnm:1.0
+      mgmt_ipv4: 172.10.10.3
+
+    ca2:
+      kind: linux
+      image: sdnm/cassini-sdnm:1.0
+      mgmt_ipv4: 172.10.10.4
+
+    ht1:
+      kind: linux
+      image: sdnm/clab-simplehost:latest
+      binds:
+        - ./network_config:/root/network_config:ro
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      mgmt_ipv4: 172.10.10.5
+
+
+    ht2:
+      kind: linux
+      image: sdnm/clab-simplehost:latest
+      binds:
+        - ./network_config:/root/network_config:ro
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      mgmt_ipv4: 172.10.10.6
+  
+  links:
+    - endpoints: ["ca1:ca1-ovif1", "ca2:ca2-ovif1"]
+    - endpoints: ["ca1:ca1-vif1", "ht1:ht1-ht1"]
+    - endpoints: ["ca2:ca2-vif1", "ht2:ht2-ht1"]

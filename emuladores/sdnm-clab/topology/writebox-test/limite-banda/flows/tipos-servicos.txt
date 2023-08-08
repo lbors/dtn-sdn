@@ -1,0 +1,33 @@
+TOS VALUE INTEGER:
+1. Routing (CS6) – ToS value 0xC0
+    iperf3 -c 192.168.1.2 -S 192     (48)
+
+2. Voice (EF) – ToS value 0xB8
+    iperf3 -c 192.168.1.2 -S 184     (46)
+
+3. Interactive-Video (AF41) – ToS value 0x88
+    iperf3 -c 192.168.1.2 -S 136     (34)
+
+4. Streaming-Video (CS4) – ToS value 0x80
+    iperf3 -c 192.168.1.2 -S 128     (32)
+
+5. Mission-Critical (AF31) – ToS value 0x68
+    iperf3 -c 192.168.1.2 -S 104     (26)
+
+6. Call-Signaling (CS3) – ToS value 0x60
+    iperf3 -c 192.168.1.2 -S 96      (24)
+
+7. Transactional Data (AF21) – ToS value 0x48
+    iperf3 -c 192.168.1.2 -S 72      (18)
+
+8. Network Management (CS2) – ToS value 0x40
+    iperf3 -c 192.168.1.2 -S 64      (16)
+
+9. Bulk Data (AF11) – ToS value 0x28
+    iperf3 -c 192.168.1.2 -S 40      (10)
+
+10. Scavenger (CS1) – ToS value 0x20
+    iperf3 -c 192.168.1.2 -S 32      (8)
+
+11. Best Effort (0) – ToS value 0x00
+    iperf3 -c 192.168.1.2 -S 0       (0)

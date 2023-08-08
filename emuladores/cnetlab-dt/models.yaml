@@ -1,0 +1,6 @@
+Models:
+  Stratum: sdnm/stratum:latest
+  Onos: onosproject/onos:2.4.x
+  SimpleHost: sdnm/simplehost:latest
+  SDNM-Cassini: sdnm/cassini-sdnm:latest
+  Whitebox-OVS: sdnm/whitebox:latest

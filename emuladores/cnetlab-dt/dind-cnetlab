@@ -1,0 +1,9 @@
+docker run -ti -v /var/run/docker.sock:/var/run/docker.sock -v /var/run/netns/:/var/run/netns/:rw -v /proc/:/proc/ -v /home/lucas/Documentos/UFPA/Mestrado/DT/cnetlab-dt:/home/cnetlab-dt  --name cnetlab docker /bin/ash
+
+
+
+cd /home && apk add python3 py3-pip && python3 -m venv .venv && source .venv/bin/activate && pip3 install pyyaml && cd cnetlab-dt && python3 setup.py install
+
+
+
+python3 cnetlab/tests/test_vlan/test_whitebox_topo2ht2sw.py

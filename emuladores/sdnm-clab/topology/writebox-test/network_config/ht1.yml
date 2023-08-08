@@ -1,0 +1,10 @@
+interfaces:
+- name: ht1-ht1
+  type: ethernet
+  state: up
+  ipv4:
+    enabled: true
+    address:
+    - ip: 10.0.1.1
+      prefix-length: 24
+    dhcp: false

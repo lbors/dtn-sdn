@@ -1,0 +1,12 @@
+{
+  "links": {
+    "netconf:172.10.10.3:830/201-netconf:172.10.10.4:830/201": {
+      "basic": {
+        "type": "OPTICAL",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    }
+  }
+}

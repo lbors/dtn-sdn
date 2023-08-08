@@ -1,0 +1,127 @@
+name: whx-redeIpe
+
+mgmt:
+  network: redeIpe
+  ipv4_subnet: 172.10.20.0/24
+
+topology:
+  defaults:
+    env:
+      IP_CTL: "172.10.20.100"
+
+  nodes:
+    onos:
+      kind: linux
+      image: onosproject/onos:2.4.0
+      mgmt_ipv4: 172.10.20.100
+      env:
+        ONOS_APPS: gui2,route-service,mcast,hostprovider,lldpprovider,proxyarp,openflow,fwd
+      # binds:
+      #   - ./onos.cfg:/root/onos/apache-karaf-4.2.8/etc/onos.cfg
+      #   - ./onos.cfg:/root/onos/config/onos.cfg
+      # ports:
+      #   - 8182:8181/tcp
+      #   - 8102:8101/tcp
+
+    df:
+      kind: linux
+      image: sdnm/clab-writebox-sdnm:latest
+      mgmt_ipv4: 172.10.20.2
+      binds:
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        - /lib/modules:/lib/modules
+
+    to:
+      kind: linux
+      image: sdnm/clab-writebox-sdnm:latest
+      mgmt_ipv4: 172.10.20.3
+      binds:
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        - /lib/modules:/lib/modules
+
+    pa:
+      kind: linux
+      image: sdnm/clab-writebox-sdnm:latest
+      mgmt_ipv4: 172.10.20.4
+      binds:
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        - /lib/modules:/lib/modules
+
+    ma:
+      kind: linux
+      image: sdnm/clab-writebox-sdnm:latest
+      mgmt_ipv4: 172.10.20.5
+      binds:
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        - /lib/modules:/lib/modules
+
+    pi:
+      kind: linux
+      image: sdnm/clab-writebox-sdnm:latest
+      mgmt_ipv4: 172.10.20.6
+      binds:
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        - /lib/modules:/lib/modules
+
+    ce:
+      kind: linux
+      image: sdnm/clab-writebox-sdnm:latest
+      mgmt_ipv4: 172.10.20.7
+      binds:
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        - /lib/modules:/lib/modules
+
+    df-ht:
+      kind: linux
+      image: sdnm/simplehost:latest
+      mgmt_ipv4: 172.10.20.32
+#      binds:
+#        - ./network_config:/root/network_config:ro
+#        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+
+    to-ht:
+      kind: linux
+      image: sdnm/simplehost:latest
+      mgmt_ipv4: 172.10.20.33
+
+    pa-ht:
+      kind: linux
+      image: sdnm/simplehost:latest
+      mgmt_ipv4: 172.10.20.34
+      
+    ma-ht:
+      kind: linux
+      image: sdnm/simplehost:latest
+      mgmt_ipv4: 172.10.20.35
+
+    pi-ht:
+      kind: linux
+      image: sdnm/simplehost:latest
+      mgmt_ipv4: 172.10.20.36
+
+    ce-ht:
+      kind: linux
+      image: sdnm/simplehost:latest
+      mgmt_ipv4: 172.10.20.37
+  
+  links:
+    # DF
+    - endpoints: ["df:vif1", "to:vif1"]
+    - endpoints: ["df:vif2", "ma:vif1"]
+    - endpoints: ["df:vif3", "ce:vif1"]
+    # TO
+    - endpoints: ["to:vif2", "pa:vif1"]
+    # PA
+    - endpoints: ["pa:vif2", "ma:vif2"]
+    # MA
+    - endpoints: ["ma:vif3","pi:vif1"]
+    # PI
+    - endpoints: ["pi:vif2", "ce:vif2"]
+
+    # Hosts
+    - endpoints: ["df:vif4", "df-ht:eth1"]
+    - endpoints: ["to:vif3", "to-ht:eth1"]
+    - endpoints: ["pa:vif3", "pa-ht:eth1"]
+    - endpoints: ["ma:vif4", "ma-ht:eth1"]
+    - endpoints: ["pi:vif3", "pi-ht:eth1"]
+    - endpoints: ["ce:vif3", "ce-ht:eth1"]

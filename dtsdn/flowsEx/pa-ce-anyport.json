@@ -1,0 +1,69 @@
+{
+    "flows":[
+     {
+      "priority": 1000,
+      "timeout": 10,
+      "isPermanent": false,
+      "deviceId": "pa",
+      "treatment": {
+          "instructions": [
+            {
+              "type": "OUTPUT",
+              "port": "2"
+            }
+          ],
+          "deferred": []
+        },
+        "selector": {
+          "criteria": [
+            {
+              "type": "ETH_TYPE",
+              "ethType": "0x0800"
+            },
+            {
+              "type": "IP_PROTO",
+              "protocol": "6"
+            },
+            {
+              "type": "IN_PORT",
+              "port": "3"
+            },
+            {
+              "type": "IPV4_DST",
+              "ip": "10.0.7.0/24"
+            }
+          ]
+        }
+    },
+      {
+      "priority": 1000,
+      "timeout": 10,
+      "isPermanent": false,
+      "deviceId": "ma",
+      "treatment": {
+          "instructions": [
+            {
+              "type": "OUTPUT",
+              "port": "3"
+            }
+          ],
+          "deferred": []
+        },
+        "selector": {
+          "criteria": [
+            {
+              "type": "ETH_TYPE",
+              "ethType": "0x0800"
+            },
+            {
+              "type": "IP_PROTO",
+              "protocol": "6"
+            },
+            {
+              "type": "IPV4_DST",
+              "ip": "10.0.7.0/24"
+            }
+          ]
+        }
+    }
+]}

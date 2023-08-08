@@ -1,0 +1,30 @@
+all:
+  children:
+    linux:
+      hosts:
+        clab-whx-redeIpe-ce:
+          ansible_host: 172.10.20.7
+        clab-whx-redeIpe-ce-ht:
+          ansible_host: 172.10.20.37
+        clab-whx-redeIpe-df:
+          ansible_host: 172.10.20.2
+        clab-whx-redeIpe-df-ht:
+          ansible_host: 172.10.20.32
+        clab-whx-redeIpe-ma:
+          ansible_host: 172.10.20.5
+        clab-whx-redeIpe-ma-ht:
+          ansible_host: 172.10.20.35
+        clab-whx-redeIpe-onos:
+          ansible_host: 172.10.20.100
+        clab-whx-redeIpe-pa:
+          ansible_host: 172.10.20.4
+        clab-whx-redeIpe-pa-ht:
+          ansible_host: 172.10.20.34
+        clab-whx-redeIpe-pi:
+          ansible_host: 172.10.20.6
+        clab-whx-redeIpe-pi-ht:
+          ansible_host: 172.10.20.36
+        clab-whx-redeIpe-to:
+          ansible_host: 172.10.20.3
+        clab-whx-redeIpe-to-ht:
+          ansible_host: 172.10.20.33

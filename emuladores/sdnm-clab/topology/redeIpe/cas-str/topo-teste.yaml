@@ -1,0 +1,185 @@
+name: redeIpe
+
+mgmt:
+  network: exp
+  ipv4_subnet: 172.10.11.0/24
+
+topology:
+  nodes:
+    onos:
+      kind: linux
+      image: onosproject/onos:2.4.0
+      mgmt_ipv4: 172.10.11.2
+      env:
+        ONOS_APPS: gui2,drivers.bmv2,pipelines.fabric,segmentrouting,lldpprovider,hostprovider,proxyarp,openflow,odtn-service,optical-rest,roadm,cpman
+      ports:
+      - 8181:8181/tcp
+      - 8101:8101/tcp
+
+    pa:
+      kind: linux
+      image: sdnm/clab-cassini-sdnm:latest
+      mgmt_ipv4: 172.10.11.3
+      binds:
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        - /lib/modules:/lib/modules
+        - ./config:/root/config
+
+    pa-sw:
+      kind: linux
+      image: sdnm/clab-stratum:latest
+      mgmt_ipv4: 172.10.11.4
+
+    pa-swe:
+      kind: linux
+      image: sdnm/clab-stratum:latest
+      mgmt_ipv4: 172.10.11.5
+
+
+    ma:
+      kind: linux
+      image: sdnm/clab-cassini-sdnm:latest
+      mgmt_ipv4: 172.10.11.6
+      binds:
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        - /lib/modules:/lib/modules
+        - ./config:/root/config
+
+    ma-sw:
+      kind: linux
+      image: sdnm/clab-stratum:latest
+      mgmt_ipv4: 172.10.11.7
+
+    ma-swe:
+      kind: linux
+      image: sdnm/clab-stratum:latest
+      mgmt_ipv4: 172.10.11.8
+
+
+    df:
+      kind: linux
+      image: sdnm/clab-cassini-sdnm:latest
+      mgmt_ipv4: 172.10.11.9
+      binds:
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        - /lib/modules:/lib/modules
+        - ./config:/root/config
+
+    df-sw:
+      kind: linux
+      image: sdnm/clab-stratum:latest
+      mgmt_ipv4: 172.10.11.10
+
+    df-swe:
+      kind: linux
+      image: sdnm/clab-stratum:latest
+      mgmt_ipv4: 172.10.11.11
+
+
+    to:
+      kind: linux
+      image: sdnm/clab-cassini-sdnm:latest
+      mgmt_ipv4: 172.10.11.12
+      binds:
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        - /lib/modules:/lib/modules
+        - ./config:/root/config
+
+    to-sw:
+      kind: linux
+      image: sdnm/clab-stratum:latest
+      mgmt_ipv4: 172.10.11.13
+
+    to-swe:
+      kind: linux
+      image: sdnm/clab-stratum:latest
+      mgmt_ipv4: 172.10.11.14
+
+
+    pi:
+      kind: linux
+      image: sdnm/clab-cassini-sdnm:latest
+      mgmt_ipv4: 172.10.11.15
+      binds:
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        - /lib/modules:/lib/modules
+        - ./config:/root/config
+
+    pi-sw:
+      kind: linux
+      image: sdnm/clab-stratum:latest
+      mgmt_ipv4: 172.10.11.16
+
+    pi-swe:
+      kind: linux
+      image: sdnm/clab-stratum:latest
+      mgmt_ipv4: 172.10.11.17
+
+
+    ce:
+      kind: linux
+      image: sdnm/clab-cassini-sdnm:latest
+      mgmt_ipv4: 172.10.11.18
+      binds:
+        - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        - /lib/modules:/lib/modules
+        - ./config:/root/config
+
+    ce-sw:
+      kind: linux
+      image: sdnm/clab-stratum:latest
+      mgmt_ipv4: 172.10.11.19
+
+    ce-swe:
+      kind: linux
+      image: sdnm/clab-stratum:latest
+      mgmt_ipv4: 172.10.11.20
+
+
+
+    ht-pa:
+      kind: linux
+      image: sdnm/simplehost:latest
+      mgmt_ipv4: 172.10.11.50
+
+    ht-ma:
+      kind: linux
+      image: sdnm/simplehost:latest
+      mgmt_ipv4: 172.10.11.51
+
+    ht-df:
+      kind: linux
+      image: sdnm/simplehost:latest
+      mgmt_ipv4: 172.10.11.52
+
+    ht-to:
+      kind: linux
+      image: sdnm/simplehost:latest
+      mgmt_ipv4: 172.10.11.53
+
+  
+  links:
+    - endpoints: ["pa:ovif1", "ma:ovif1"]
+    - endpoints: ["pa:ovif2", "to:ovif2"]
+    - endpoints: ["ma:ovif2", "df:ovif2"]
+    - endpoints: ["to:ovif1", "df:ovif1"]
+
+    - endpoints: ["pa:vif1", "pa-sw:vif1"]
+    - endpoints: ["pa:vif2", "pa-sw:vif2"]
+    - endpoints: ["pa-sw:vif3", "pa-swe:vif1"]
+    - endpoints: ["pa-swe:vif2", "ht-pa:eth1"]    
+
+    - endpoints: ["ma:vif1", "ma-sw:vif1"]
+    - endpoints: ["ma:vif2", "ma-sw:vif2"]
+    - endpoints: ["ma-sw:vif3", "ma-swe:vif1"]
+    - endpoints: ["ma-swe:vif2", "ht-ma:eth1"]
+
+    - endpoints: ["to:vif1", "to-sw:vif1"]
+    - endpoints: ["to:vif2", "to-sw:vif2"]
+    - endpoints: ["to-sw:vif3", "to-swe:vif1"]
+    - endpoints: ["to-swe:vif2", "ht-to:eth1"]
+
+    - endpoints: ["df:vif1", "df-sw:vif1"]
+    - endpoints: ["df:vif2", "df-sw:vif2"]
+    - endpoints: ["df-sw:vif3", "df-swe:vif1"]
+    - endpoints: ["df-swe:vif2", "ht-df:eth1"]

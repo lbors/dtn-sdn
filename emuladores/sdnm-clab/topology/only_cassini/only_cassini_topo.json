@@ -1,0 +1,34 @@
+{
+  "devices" : {
+    "netconf:172.10.10.3:830" : {
+      "basic" : {
+        "name":"ca1",
+        "driver":"cassini-openconfig",
+        "longitude": -45,
+        "latitude": 45
+      },
+      "netconf" : {
+        "ip" : "172.10.10.3",
+        "port" : "830",
+        "username" : "root",
+        "password" : "root",
+        "idle-timeout" : "0"
+      }
+    },
+    "netconf:172.10.10.4:830" : {
+      "basic" : {
+        "name":"ca2",
+        "driver":"cassini-openconfig",
+        "longitude": 45,
+        "latitude": 45
+      },
+      "netconf" : {
+        "ip" : "172.10.10.4",
+        "port" : "830",
+        "username" : "root",
+        "password" : "root",
+        "idle-timeout" : "0"
+      }
+    }
+  }
+}

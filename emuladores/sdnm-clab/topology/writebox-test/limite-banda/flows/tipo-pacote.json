@@ -1,0 +1,30 @@
+{
+  "flows":[
+   {
+    "priority": 1000,
+    "timeout": 100,
+    "isPermanent": false,
+    "deviceId": "of:0000d6b2d75c7e44",
+    "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "2"
+          }
+        ],
+        "deferred": []
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "ETH_TYPE",
+            "ethType": "0x0800"
+          },
+          {
+            "type": "IP_DSCP",
+            "ipDscp": "46"
+          }
+        ]
+      }
+  }
+]}

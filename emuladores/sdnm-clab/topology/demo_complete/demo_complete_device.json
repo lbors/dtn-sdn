@@ -1,0 +1,200 @@
+{
+  "devices": {
+    "netconf:172.10.10.3:830": {
+      "basic": {
+        "name": "ca1w",
+        "driver": "cassini-openconfig",
+        "longitude": -45,
+        "latitude": 45
+      },
+      "netconf": {
+        "ip": "172.10.10.3",
+        "port": "830",
+        "username": "root",
+        "password": "root",
+        "idle-timeout": "0"
+      }
+    },
+    "netconf:172.10.10.4:830": {
+      "basic": {
+        "name": "ca2w",
+        "driver": "cassini-openconfig",
+        "longitude": -30,
+        "latitude": 30
+      },
+      "netconf": {
+        "ip": "172.10.10.4",
+        "port": "830",
+        "username": "root",
+        "password": "root",
+        "idle-timeout": "0"
+      }
+    },
+    "device:spine_w1": {
+      "basic": {
+        "managementAddress": "grpc://172.10.10.5:50001?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.pipelines.fabric",
+        "longitude": -90,
+        "latitude": 15
+      },
+      "segmentrouting": {
+        "name": "spine_w1",
+        "ipv4NodeSid": 100,
+        "ipv4Loopback": "172.10.10.5",
+        "routerMac": "00:00:00:00:01:00",
+        "isEdgeRouter": false,
+        "adjacencySids": []
+      }
+    },
+    "device:spine_w2": {
+      "basic": {
+        "managementAddress": "grpc://172.10.10.6:50001?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.pipelines.fabric",
+        "longitude": -45,
+        "latitude": 0
+      },
+      "segmentrouting": {
+        "name": "spine_w2",
+        "ipv4NodeSid": 200,
+        "ipv4Loopback": "172.10.10.6",
+        "routerMac": "00:00:00:00:02:00",
+        "isEdgeRouter": false,
+        "adjacencySids": []
+      }
+    },
+    "device:leaf_w1": {
+      "basic": {
+        "managementAddress": "grpc://172.10.10.7:50001?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.pipelines.fabric",
+        "longitude": -90,
+        "latitude": -30
+      },
+      "segmentrouting": {
+        "name": "leaf_w1",
+        "ipv4NodeSid": 110,
+        "ipv4Loopback": "172.10.10.7",
+        "routerMac": "00:00:00:00:01:10",
+        "isEdgeRouter": true,
+        "adjacencySids": []
+      }
+    },
+    "device:leaf_w2": {
+      "basic": {
+        "managementAddress": "grpc://172.10.10.8:50001?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.pipelines.fabric",
+        "longitude": -45,
+        "latitude": -30
+      },
+      "segmentrouting": {
+        "name": "leaf_w2",
+        "ipv4NodeSid": 120,
+        "ipv4Loopback": "172.10.10.8",
+        "routerMac": "00:00:00:00:01:20",
+        "isEdgeRouter": true,
+        "adjacencySids": []
+      }
+    },
+    "netconf:172.10.10.11:830": {
+      "netconf": {
+        "ip": "172.10.10.11",
+        "port": "830",
+        "username": "root",
+        "password": "root",
+        "idle-timeout": "0"
+      },
+      "basic": {
+        "name": "ca1e",
+        "driver": "cassini-openconfig",
+        "longitude": 45,
+        "latitude": 45
+      }
+    },
+    "netconf:172.10.10.12:830": {
+      "basic": {
+        "name": "ca2e",
+        "driver": "cassini-openconfig",
+        "longitude": 30,
+        "latitude": 30
+      },
+      "netconf": {
+        "ip": "172.10.10.12",
+        "port": "830",
+        "username": "root",
+        "password": "root",
+        "idle-timeout": "0"
+      }
+    },
+    "device:spine_e1": {
+      "segmentrouting": {
+        "name": "spine_e1",
+        "ipv4NodeSid": 300,
+        "ipv4Loopback": "172.10.10.13",
+        "routerMac": "00:00:00:00:03:00",
+        "isEdgeRouter": false,
+        "adjacencySids": []
+      },
+      "basic": {
+        "managementAddress": "grpc://172.10.10.13:50001?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.pipelines.fabric",
+        "longitude": 90,
+        "latitude": 15
+      }
+    },
+    "device:spine_e2": {
+      "basic": {
+        "managementAddress": "grpc://172.10.10.14:50001?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.pipelines.fabric",
+        "longitude": 45,
+        "latitude": 0
+      },
+      "segmentrouting": {
+        "name": "spine_e2",
+        "ipv4NodeSid": 400,
+        "ipv4Loopback": "172.10.10.14",
+        "routerMac": "00:00:00:00:04:00",
+        "isEdgeRouter": false,
+        "adjacencySids": []
+      }
+    },
+    "device:leaf_e1": {
+      "basic": {
+        "managementAddress": "grpc://172.10.10.15:50001?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.pipelines.fabric",
+        "longitude": 45,
+        "latitude": -30
+      },
+      "segmentrouting": {
+        "name": "leaf_e1",
+        "ipv4NodeSid": 310,
+        "ipv4Loopback": "172.10.10.15",
+        "routerMac": "00:00:00:00:03:10",
+        "isEdgeRouter": true,
+        "adjacencySids": []
+      }
+    },
+    "device:leaf_e2": {
+      "basic": {
+        "managementAddress": "grpc://172.10.10.16:50001?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.pipelines.fabric",
+        "longitude": 90,
+        "latitude": -30
+      },
+      "segmentrouting": {
+        "name": "leaf_e2",
+        "ipv4NodeSid": 320,
+        "ipv4Loopback": "172.10.10.16",
+        "routerMac": "00:00:00:00:03:20",
+        "isEdgeRouter": true,
+        "adjacencySids": []
+      }
+    }
+  }
+}

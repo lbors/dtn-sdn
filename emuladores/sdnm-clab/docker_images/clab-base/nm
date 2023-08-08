@@ -1,0 +1,71 @@
+------------------CENTOS 8------------------------------
+docker build --rm -t nmstate-centos8 -<< EOF
+
+FROM jrei/systemd-centos:8
+COPY eth1.ym .
+RUN yum install -y \
+    NetworkManager \
+    nmstate \
+ && yum clean all
+EOF
+
+
+docker run -d --name nmstate-centos8 --tmpfs /tmp --tmpfs /run --tmpfs /run/lock -v /sys/fs/cgroup:/sys/fs/cgroup:ro --cap-add NET_ADMIN nmstate-centos8
+
+docker network create testnet
+docker network connect testnet nmstaste-centos8
+docker exec -it nmstate-centos8 bash
+
+cat << EOF > eth1.yml
+interfaces:
+- name: eth1
+  type: ethernet
+  state: up
+  ipv4:
+    enabled: true
+    address:
+    - ip: 192.0.2.10
+      prefix-length: 24
+    dhcp: false
+
+EOF
+nmstatectl set eth1.yml
+
+------------------DEBIAN 11------------------------------
+docker build -t nmstate-debian:11 -f Dockerfile.nmstate-debian11 .
+
+docker run -d --name nmstate-debian --privileged --tmpfs /run --tmpfs /run/lock -v /sys/fs/cgroup:/sys/fs/cgroup:ro --cap-add NET_ADMIN nmstate-debian:11
+
+-----------------------
+
+No match for argument: software-properties-common
+No match for argument: build-essential
+No match for argument: libssl-dev
+No match for argument: libpcre3
+No match for argument: libpcre3-dev
+No match for argument: doxygen
+No match for argument: zlib1g
+No match for argument: zlib1g-dev
+No match for argument: libev-dev
+No match for argument: libavl-dev
+No match for argument: libprotobuf-c-dev
+No match for argument: python-dev
+No match for argument: lua5.2
+No match for argument: debhelper
+No match for argument: apt-utils
+No match for argument: python3-dev
+No match for argument: libcurl4-openssl-dev
+No match for argument: lib32ncurses5-dev
+
+
+1 - epel-release
+
+yum --enablerepo=powertools install -y perl-Digest-SHA1 dpkg-perl dpkg-dev perl-Devel-GlobalDestruction perl-File-Remove perl-Mail-Box debhelper doxygen
+
+
+devscripts, debhelper -> libyang
+rpm -> libnetconf2
+
+
+yum install -y epel-release
+

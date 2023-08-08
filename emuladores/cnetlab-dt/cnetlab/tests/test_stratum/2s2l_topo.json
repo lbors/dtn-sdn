@@ -1,0 +1,149 @@
+{
+  "devices": {
+    "device:spine1": {
+      "basic": {
+        "managementAddress": "grpc://172.17.0.2:50001?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.pipelines.fabric"
+      },
+      "segmentrouting": {
+        "name": "spine1",
+        "ipv4NodeSid": 110,
+        "ipv4Loopback": "172.17.0.2",
+        "routerMac": "00:00:00:00:01:10",
+        "isEdgeRouter": false,
+        "adjacencySids": []
+      }
+    },
+    "device:spine2": {
+      "basic": {
+        "managementAddress": "grpc://172.17.0.3:50001?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.pipelines.fabric"
+      },
+      "segmentrouting": {
+        "name": "spine2",
+        "ipv4NodeSid": 210,
+        "ipv4Loopback": "172.17.0.3",
+        "routerMac": "00:00:00:00:02:10",
+        "isEdgeRouter": false,
+        "adjacencySids": []
+      }
+    },
+    "device:leaf1": {
+      "basic": {
+        "managementAddress": "grpc://172.17.0.4:50001?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.pipelines.fabric"
+      },
+      "segmentrouting": {
+        "name": "leaf1",
+        "ipv4NodeSid": 100,
+        "ipv4Loopback": "172.17.0.4",
+        "routerMac": "00:00:00:00:01:00",
+        "isEdgeRouter": true,
+        "adjacencySids": []
+      }
+    },
+    "device:leaf2": {
+      "basic": {
+        "managementAddress": "grpc://172.17.0.5:50001?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.onosproject.pipelines.fabric"
+      },
+      "segmentrouting": {
+        "name": "leaf2",
+        "ipv4NodeSid": 200,
+        "ipv4Loopback": "172.17.0.5",
+        "routerMac": "00:00:00:00:02:00",
+        "isEdgeRouter": true,
+        "adjacencySids": []
+      }
+    }
+  },
+  "links": {
+    "device:spine1/1-device:leaf1/1": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine1/2-device:leaf2/1": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine2/1-device:leaf1/2": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine2/2-device:leaf2/2": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    }
+  },
+  "ports": {
+    "device:leaf1/3": {
+      "interfaces": [
+        {
+          "name": "h1",
+          "ips": [
+            "10.0.2.254/24"
+          ],
+          "vlan-untagged": 10
+        }
+      ]
+    },
+    "device:leaf1/4": {
+      "interfaces": [
+        {
+          "name": "h2",
+          "ips": [
+            "10.0.2.254/24"
+          ],
+          "vlan-tagged": [
+            10
+          ]
+        }
+      ]
+    },
+    "device:leaf2/3": {
+      "interfaces": [
+        {
+          "name": "h3",
+          "ips": [
+            "10.0.3.254/24"
+          ],
+          "vlan-untagged": 20
+        }
+      ]
+    },
+    "device:leaf2/4": {
+      "interfaces": [
+        {
+          "name": "h4",
+          "ips": [
+            "10.0.3.254/24"
+          ],
+          "vlan-tagged": [
+            20
+          ]
+        }
+      ]
+    }
+  }
+}
+

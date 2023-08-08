@@ -1,0 +1,76 @@
+{
+  "links": {
+    "netconf:172.10.10.3:830/201-netconf:172.10.10.4:830/201": {
+      "basic": {
+        "type": "OPTICAL",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+   "device:spine1/1-netconf:172.10.10.3:830/101": {
+      "basic": {
+        "type": "INDIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+   "device:spine2/1-netconf:172.10.10.4:830/101": {
+      "basic": {
+        "type": "INDIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+   "device:spine1/1-device:spine2/1": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+   "device:spine1/2-device:leaf1/1": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    },
+    "device:spine2/2-device:leaf2/1": {
+      "basic": {
+        "type": "DIRECT",
+        "metric": 1,
+        "durable": true,
+        "bidirectional": true
+      }
+    }
+  },
+  "ports": {
+    "device:leaf1/2": {
+      "interfaces": [
+        {
+          "name": "ht1",
+          "ips": [
+            "10.0.1.254/24"
+          ],
+          "vlan-untagged": 10
+        }
+      ]
+    },
+    "device:leaf2/2": {
+      "interfaces": [
+        {
+          "name": "ht2",
+          "ips": [
+            "10.0.2.254/24"
+          ],
+          "vlan-untagged": 20
+        }
+      ]
+    }
+  }
+}
